@@ -7,12 +7,48 @@
     <title>Note Taking App</title>
     <!-- Importing Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+        /* Custom color scheme */
+        .bg-navy-500 {
+            background-color: #20284a;
+        }
+
+        .text-navy-500 {
+            color: #20284a;
+        }
+
+        .bg-gray-200 {
+            background-color: #e2e8f0;
+        }
+
+        /* Custom styles */
+        .unhidden {
+            display: block !important;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .custom-button {
+            background-color: #20284a;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .custom-button:hover {
+            background-color: #1c233f;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-200">
     <header class="bg-navy-500 text-white py-3 px-4 flex justify-between items-center">
         <h1 class="text-xl font-bold">Note Taking App</h1>
-        <button id="write-note" class="bg-white text-navy-500 py-1 px-2 rounded shadow">
+        <button id="write-note" class="custom-button">
             Write Note
         </button>
     </header>
@@ -23,21 +59,4 @@
             </div>
             <div class="w-2/3">
                 <div class="bg-white shadow p-4 rounded">
-                    <label class="block mb-2 font-bold text-gray-700" for="note-title">Note Title:</label>
-                    <input type="text" id="note-title" class="w-full border border-gray-400 p-2 mb-4 rounded-md" />
-                    <label class="block mb-2 font-bold text-gray-700" for="note-text">Note Text:</label>
-                    <textarea id="note-text" class="w-full border border-gray-400 p-2 mb-4 rounded-md"></textarea>
-                    <button id="save-note" class="bg-navy-500 text-white py-2 px-4 rounded shadow mr-2 unhidden">
-                        Save Note
-                    </button>
-                    <button id="delete-note" class="bg-red-500 text-white py-2 px-4 rounded shadow hidden">
-                        Delete Note
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="./assets/script.js"></script>
-</body>
-
-</html>
+                    <label class="block mb-2 font-bold text-gray-700"

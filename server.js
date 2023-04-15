@@ -4,7 +4,7 @@ const fs = require('fs');
 const notesRouter = require("./routes/app")
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.use(express.static(path.join(__dirname, './public')));
 app.use(express.json());

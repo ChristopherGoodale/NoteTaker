@@ -9,28 +9,55 @@
         integrity="sha512-+mXhRLasruUHTyvpoM+L1agJhFVgYbYtzsTAp09xP8aXiaDBrbJN1Efnq3/j6U8n6QetTcTnb4ldZ3/QOVdJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@0.9.0/dist/tailwind.min.css" />
+    <style>
+        body {
+            background-color: purple;
+            color: black;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .notes-button {
+            font-size: 2rem;
+            background-color: navy;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .notes-button:hover {
+            background-color: blue;
+        }
+
+        .subheading {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-200">
+<body>
 
-    <nav class="bg-navy text-white p-6">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl">Note Taking App</h1>
-            <a href="notes.html" class="text-xl hover:underline"><i class="fas fa-notes-medical"></i> Notes</a>
-        </div>
-    </nav>
-
-    <div class="container mx-auto py-10">
-        <div class="max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
-            <div class="py-4 px-6 bg-navy text-white">
-                <h2 class="text-2xl font-bold">Welcome to Note Taking App</h2>
-            </div>
-            <div class="py-4 px-6">
-                <p class="text-gray-700">Take notes and keep them organized with Note Taking App. Click on the "Notes"
-                    link in
-                    the navigation bar to get started.</p>
-            </div>
-        </div>
+    <div class="center">
+        <div class="title">Note Taking App</div>
+        <a href="notes.html" class="notes-button"><i class="fas fa-notes-medical"></i> Notes</a>
+        <div class="subheading">Take notes and keep them organized</div>
+        <div class="subheading">Click on the "Notes" button in the navigation bar to get started</div>
     </div>
 
 </body>

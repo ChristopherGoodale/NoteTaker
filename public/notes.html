@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Taking App</title>
+    <!-- Importing Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-200">
+    <header class="bg-navy-500 text-white py-3 px-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">Note Taking App</h1>
+        <button id="write-note" class="bg-white text-navy-500 py-1 px-2 rounded shadow">
+            Write Note
+        </button>
+    </header>
+    <div class="container mx-auto py-6">
+        <div class="flex">
+            <div class="w-1/3 pr-4">
+                <ul id="notes-list" class="bg-white shadow p-4 rounded overflow-y-auto max-h-screen"></ul>
+            </div>
+            <div class="w-2/3">
+                <div class="bg-white shadow p-4 rounded">
+                    <label class="block mb-2 font-bold text-gray-700" for="note-title">Note Title:</label>
+                    <input type="text" id="note-title" class="w-full border border-gray-400 p-2 mb-4 rounded-md" />
+                    <label class="block mb-2 font-bold text-gray-700" for="note-text">Note Text:</label>
+                    <textarea id="note-text" class="w-full border border-gray-400 p-2 mb-4 rounded-md"></textarea>
+                    <button id="save-note" class="bg-navy-500 text-white py-2 px-4 rounded shadow mr-2 unhidden">
+                        Save Note
+                    </button>
+                    <button id="delete-note" class="bg-red-500 text-white py-2 px-4 rounded shadow hidden">
+                        Delete Note
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
